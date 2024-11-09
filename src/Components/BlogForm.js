@@ -21,7 +21,7 @@ export default function BlogForm() {
             await addblog(obj);
             router.push("/Blog");
             formref.current.reset();
-        }} className="w-2/3 mx-auto flex flex-col gap-4">
+        }} className="w-2/3 mx-auto flex flex-col gap-6">
         <input
           type="text"
           className="border border-gray-500 p-4 rounded bg-slate-200 flex flex-grow my-1"
