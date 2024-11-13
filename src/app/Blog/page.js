@@ -4,10 +4,10 @@ export default async function Blogs() {
     let res = await fetch('http://localhost:3000/api/blogs',
         {cache : "no-cache"}
     );
-    res = await res.json()
+    res =await res.json()
     
     return (
-        <>
+        <div className="bg-white">
         <div className="container flex justify-between mx-auto py-2">
             <h1 className="text-3xl font-bold text-center">Blogs</h1>
             <Link href={"/Blog/addBlogs"}>
@@ -17,7 +17,7 @@ export default async function Blogs() {
         <div className="container mx-auto my-5">
             {res.data.map((blog) => {
                 return (
-                    <div className="border p-2 my-1" key={blog._id}>
+                    <div className="border border-slate-500 rounded-md p-2 my-3" key={blog._id}>
                         <h2 className="text-3xl font-semibold">{blog.title}</h2>
                         <p>{blog.body}</p>
                         <p>{blog.author}</p>
@@ -25,6 +25,6 @@ export default async function Blogs() {
                 )
             })}
         </div>
-        </>
+        </div>
     )
 }
