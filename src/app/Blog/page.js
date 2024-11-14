@@ -9,7 +9,7 @@ export default async function Blogs() {
     return (
         <div className="bg-white">
         <div className="container flex justify-between mx-auto py-2">
-            <h1 className="text-3xl font-bold text-center">Blogs</h1>
+            <h1 className="text-3xl font-bold text-center font-sans">Blogs</h1>
             <Link href={"/Blog/addBlogs"}>
             <button className="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded" >Add Blog</button>
             </Link>
