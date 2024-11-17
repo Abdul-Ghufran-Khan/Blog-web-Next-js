@@ -14,7 +14,7 @@ export default async function Blogs() {
             <button className="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded" >Add Blog</button>
             </Link>
         </div>
-        <div className="container mx-auto my-5">
+        <div className="container mx-auto my-6">
             {res.data.map((blog) => {
                 return (
                     <div className="border border-slate-500 rounded-md p-2 my-3" key={blog._id}>
