@@ -7,7 +7,7 @@ export default async function Blogs() {
     res =await res.json()
     
     return (
-        <div className="bg-white">
+        <div className="bg-white min-h-screen">
         <div className="container flex justify-between mx-auto py-2">
             <h1 className="text-3xl font-bold text-center font-sans">Blogs</h1>
             <Link href={"/Blog/addBlogs"}>
@@ -17,11 +17,11 @@ export default async function Blogs() {
         <div className="container mx-auto my-5">
             {res.data.map((blog) => {
                 return (
-                    <div className="border border-slate-500 rounded-md p-2 my-3" key={blog._id}>
+                    <Link href={`/Blog/${blog._id}`} key={blog._id}>
+                    <div className="border border-slate-500 rounded-md p-2 my-3">
                         <h2 className="text-3xl font-semibold">{blog.title}</h2>
-                        <p>{blog.body}</p>
-                        <p>{blog.author}</p>
                     </div>
+                    </Link>
                 )
             })}
         </div>
