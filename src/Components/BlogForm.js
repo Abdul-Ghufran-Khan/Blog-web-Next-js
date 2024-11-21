@@ -45,7 +45,7 @@ export default function BlogForm() {
 
         <input 
         type="submit" 
-        className="bg-gray-800 rounded m-2 font-semibold p-3 px-8 text-white" 
+        className="bg-gray-800 rounded m-2 cursor-pointer hover:bg-gray-900  font-semibold p-3 px-8 text-white" 
         value={"Add Blog"} />
       </form>
     )
